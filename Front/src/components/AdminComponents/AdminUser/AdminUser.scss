@@ -1,0 +1,198 @@
+@use '@scssVariables' as v;
+
+.admin-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+
+  &__list-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 3rem 0 5rem 0;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      margin: 0.5rem 0;
+      background-color: v.$clr-light-dark;
+      text-align: left;
+
+      &__role {
+        text-transform: uppercase;
+        width: 10rem;
+        font-size: 1.7rem;
+      }
+
+      &__user-info {
+        width: 100%;
+        display: flex;
+        margin-left: 3rem;
+
+        &__name-email-container {
+          width: 60%;
+        }
+      }
+
+      &__user-info span {
+        display: inline-block;
+        color: v.$clr-primary;
+        width: 4rem;
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+      }
+
+      &__buttons * {
+        background-color: v.$clr-primary;
+        height: 2rem;
+        margin: 0.25rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      &__buttons *:hover {
+        background-color: v.$clr-primary-hover;
+        transition: background-color 0.2s ease;
+      }
+    }
+  }
+
+  &__add-user {
+    &__add-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__input-container {
+        display: flex;
+
+        &__first-column {
+          margin-right: 3rem;
+        }
+      }
+
+      &__button-container {
+        margin: 3rem 0 5rem 0;
+      }
+    }
+
+    &__add-form {
+      &__message {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        width: 30rem;
+    }
+    }
+
+    &__add-form h3 {
+      margin: 0.5rem 0 0.25rem 0;
+    }
+
+    &__add-form input {
+      width: 15rem;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .admin-user {
+    &__list-container {
+      width: 100%;
+      &__item {
+        flex-direction: column;
+
+        &__role {
+          width: fit-content;
+          margin-bottom: 2rem;
+        }
+
+        &__user-info {
+          width: 100%;
+          margin-left: 4rem;
+          margin-bottom: 3rem;
+          align-items: center;
+        }
+
+        &__buttons {
+          flex-direction: row;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .admin-user {
+    &__list-container {
+      &__item {
+        &__user-info {
+          flex-direction: column;
+          align-items: start;
+          text-align: center;
+          margin-left: 0;
+
+          &__name-email-container {
+            width: 100%;
+          }
+
+          &__address {
+            width: 100%;
+          }
+
+          &__name-email-container * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          &__address * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        &__user-info span {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__add-user {
+      &__add-form {
+        &__input-container {
+          flex-direction: column;
+
+          &__first-column {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .admin-user {
+    &__list-container {
+      width: 100%;
+      &__item {
+        margin: 0.5rem 0;
+        padding: 1rem;
+      }
+    }
+  }
+}

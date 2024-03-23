@@ -1,0 +1,82 @@
+@use '@scssVariables' as v;
+
+.admin-booking-modal {
+  &__book {
+    &__form-container {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__form {
+      text-align: center;
+
+      &__left {
+        width: 350px;
+      }
+
+      &__right {
+        text-align: left;
+        margin-left: 4rem;
+      }
+
+      &__hotel input {
+        margin-right: 0.5rem;
+      }
+
+      &__message {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: v.$clr-primary;
+      }
+
+      &__total-submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        margin: 2rem 0 1rem 0;
+
+        &__total {
+          font-size: 3rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.admin-booking-modal h2 {
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .admin-booking-modal {
+    &__book {
+      &__form-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__form {
+        &__right {
+          display: flex;
+          margin: 0;
+          margin-top: 2rem;
+        }
+
+        &__right * {
+          margin: 0 0.5rem; 
+        }
+
+        &__hotel fieldset {
+          margin: 0;
+        }
+
+        &__total-submit {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

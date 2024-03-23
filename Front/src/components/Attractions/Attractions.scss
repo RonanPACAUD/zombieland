@@ -1,0 +1,126 @@
+@use '@scssVariables' as v;
+
+.attractions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__main-title {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    z-index: 1;
+
+    &__underline {
+      width: 30rem;
+    }
+  }
+
+  &__main-title p {
+    width: 32rem;
+    font-size: 1.5rem;
+  }
+
+  &__filter-bar form {
+    color: v.$clr-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  &__filter-bar * {
+    margin: 0 1rem;
+  }
+
+  &__list {
+    max-width: 1300px;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  &__null-message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1420px) {
+  .attractions {
+    &__list {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .attractions {
+    &__main-title {
+      &__underline {
+        width: 27rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      width: 30rem;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+}
+
+@media (max-width: 1000px) {
+  .attractions {
+    &__main-title {
+      &__underline {
+        width: 24rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      width: 25rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .attractions {
+    &__main-title {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      &__underline {
+        width: 24rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      width: 25rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .attractions {
+    &__main-title {
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+}

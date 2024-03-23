@@ -1,0 +1,273 @@
+@use '@scssVariables' as v;
+
+.bookings {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__main-title {
+    left: 10%;
+    top: 30%;
+
+    &__underline {
+      width: 40rem;
+    }
+  }
+
+  &__main-title p {
+    width: 43rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__practical-info,
+  &__book {
+    text-align: center;
+  }
+
+  &__book {
+    margin-top: 3rem;
+
+    &__form {
+      text-align: center;
+      position: relative;
+      &__left {
+        max-width: 350px;
+      }
+
+      &__right {
+        text-align: left;
+        margin-left: 4rem;
+      }
+
+      &__hotel input {
+        margin-right: 0.5rem;
+      }
+
+      &__ticket {
+        &__input-ticket {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &__message {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: v.$clr-primary;
+      }
+
+      &__total-submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+
+        &__total {
+          font-size: 3rem;
+          text-align: left;
+        }
+      }
+    }
+
+    &__form-container {
+      display: flex;
+    }
+  }
+
+  &__practical-info {
+    width: 55rem;
+    margin: 3rem 0 5rem 0;
+
+    &__info-container {
+      display: flex;
+      justify-content: space-between;
+
+      &__opening {
+        width: 20%;
+      }
+
+      &__rate {
+        &__rate-container {
+          display: flex;
+          text-align: left;
+        }
+
+        &__without-hotel {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.inactive-form-state {
+  background-color: v.$clr-modal-background;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .bookings {
+    &__main-title {
+      &__underline {
+        width: 34rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      width: 30rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .bookings {
+    &__main-title {
+      &__underline {
+        width: 30rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      width: 26rem;
+    }
+
+    &__practical-info {
+      width: 95%;
+
+      &__info-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        &__opening {
+          width: 100%;
+        }
+
+        &__rate {
+          &__rate-container {
+            text-align: center;
+          }
+
+          &__without-hotel {
+            margin-right: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .bookings {
+    &__main-title {
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+
+      &__underline {
+        width: 100%;
+      }
+    }
+    
+    &__main-title p {
+      text-align: center;
+      width: 22rem;
+    }
+
+    &__book {
+      margin: 0 2rem;
+
+      &__form-container {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__form {
+        &__right {
+          text-align: center;
+          margin-left: 0rem;
+          display: flex;
+        }
+
+        &__hotel {
+          margin: 0 3rem;
+        }
+      }
+
+      &__form-container {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 629px) {
+  .bookings {
+    &__main-title {
+      width: 20rem;
+
+      &__underline {
+        width: 18rem;
+      }
+    }
+
+    &__main-title p {
+      width: 20rem;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .bookings {
+    &__book {
+      &__form {
+        &__right {
+          text-align: center;
+          margin-left: 0rem;
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__total-submit {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+
+          &__total {
+            margin: 0;
+            margin: 1rem 0 3rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .bookings {
+    &__main-title {
+      width: 15rem;
+
+      &__underline {
+        width: 100%;
+      }
+    }
+    
+    &__main-title p {
+      width:100%;
+      font-size: 1.2rem;
+    }
+  }
+}

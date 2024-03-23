@@ -1,0 +1,58 @@
+@use '@scssVariables' as v;
+
+
+.connexion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+
+    &__underline {
+        filter: invert(16%) sepia(23%) saturate(4857%) hue-rotate(337deg) brightness(108%) contrast(131%);
+        width: 15rem;
+        transform: rotate(180deg);
+    }
+
+    &__form {
+
+        &__button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        &__message {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+    }
+
+    &__inscription-link {
+        margin: 1.5rem 0;
+
+        &__button {
+            cursor: pointer;
+            color: v.$clr-primary;
+            font-size: 1.4rem;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.connexion input {
+    display: block;
+    background-color: v.$clr-ultra-light;
+    width: 16rem;  
+}
+
+.connexion h1 {
+    font-size: 3rem;
+}
+
+.connexion h3 {
+    color: v.$clr-primary;
+}

@@ -1,0 +1,56 @@
+@use '@scssVariables' as v;
+
+.admin-user-modal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem 2rem 2rem;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__input-container {
+            display: flex;
+            margin-top: 2rem;
+            text-align: left;
+
+            &__first-column {
+                margin-right: 4rem;
+            }
+        }
+    }
+}
+.admin-user-modal h2 {
+    margin: 0;
+}
+
+.admin-user-modal h3 {
+    color: v.$clr-primary;
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+@media (max-width: 800px) {
+    .admin-user-modal {
+        &__form {
+            width: 100%;
+            &__input-container {
+                flex-direction: column;
+                text-align: center;
+                width: 80%;
+
+                &__first-column {
+                    margin: 0;
+                }
+            }
+
+            &__input-container input {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '@scssVariables' as v;
+
+.burger-menu {
+  background-color: v.$clr-medium-dark;
+  position: absolute;
+  right: 0;
+  top: 6.9rem;
+  width: 17rem;
+  height: 100vh;
+  padding: 2rem;
+  animation: burger-slide 0.3s ease;
+
+  &__container {
+    &__nav-link {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__nav-link * {
+      font-size: 2rem;
+      margin: 0.8rem 0;
+      text-transform: uppercase;
+    }
+
+    &__nav-link {
+      &__connexion-button {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .burger-menu {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+@keyframes burger-slide {
+    from {
+        transform: translateX(100%);
+    } 
+    to {
+        transform: translateX(0%);
+    }
+}

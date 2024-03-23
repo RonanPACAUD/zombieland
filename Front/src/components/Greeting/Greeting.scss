@@ -1,0 +1,214 @@
+@use '@scssVariables' as v;
+
+.greeting {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__main-title {
+    left: 55%;
+    top: 52%;
+
+    &__underline {
+      width: 46rem;
+    }
+  }
+
+  &__main-title p {
+    width: 43rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__presentation,
+  &__under-presentation {
+    text-align: center;
+    width: 55%;
+    max-width: 1300px;
+    margin: 3rem 0 5rem 0;
+  }
+
+  &__park-map {
+    width: 65%;
+    max-width: 1800px;
+    height: 40rem;
+    object-fit: cover;
+    filter: grayscale(25%);
+  }
+
+  &__practical-info {
+    &__info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+
+      &__opening-location {
+        &__rate {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: left;
+          width: 100%;
+        }
+      }
+
+      &__location-map-container {
+        margin-left: 1rem;
+        width: 70%;
+
+        &__location-map {
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1720px) {
+  .greeting {
+    &__main-title {
+      left: 45%;
+    }
+  }
+}
+
+@media (max-width: 1420px) {
+  .greeting {
+    &__main-title {
+      left: 35%;
+    }
+
+    &__presentation,
+    &__under-presentation {
+      width: 75%;
+    }
+
+    &__park-map {
+      width: 85%;
+      height: 30rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .greeting {
+    &__main-title {
+      left: 30%;
+
+      &__underline {
+        width: 40rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+    }
+
+    &__practical-info {
+      &__info-container {
+        flex-direction: column-reverse;
+
+        &__location-map-container {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .greeting {
+    &__main-title {
+      &__underline {
+        width: 36rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      width: 33rem;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .greeting {
+    &__main-title {
+      left: 40%;
+      top: 50%;
+
+      &__underline {
+        width: 20rem;
+      }
+    }
+
+    &__main-title p {
+      width: 25rem;
+    }
+
+    &__practical-info {
+      &__info-container {
+        &__location-map-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .greeting {
+    &__main-title {
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 22rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .greeting {
+    &__main-title {
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .greeting {
+    &__practical-info {
+      &__info-container {
+        &__opening-location {
+          &__rate {
+            text-align: center;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .with-hotel {
+    margin-top: 2rem;
+  }
+}

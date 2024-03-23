@@ -1,0 +1,103 @@
+@use '@scssVariables' as v;
+
+.admin-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+
+  &__container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 3rem 0 5rem 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0;
+    background-color: v.$clr-light-dark;
+    text-align: left;
+
+    &__fictive {
+      width: 8rem;
+    }
+
+    &__delete-button {
+      background-color: v.$clr-primary;
+      height: 2.5rem;
+      margin: 0.5rem;
+      width: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    &__delete-button:hover {
+      background-color: v.$clr-primary-hover;
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &__item span {
+    color: v.$clr-primary;
+  }
+
+  &__add {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+  }
+
+  &__add input {
+    width: 5rem;
+  }
+
+  &__add button {
+    background-color: v.$clr-primary;
+    height: 2.5rem;
+    margin: 0 0.5rem 0 3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  &__add button:hover {
+    background-color: v.$clr-primary-hover;
+    transition: background-color 0.2s ease;
+  }
+}
+
+@media (max-width: 750px) {
+  .admin-price {
+    &__item {
+      padding: 0.5rem 1rem;
+      width: 100%;
+
+      &__delete-button {
+        width: 5rem;
+      }
+    }
+
+    &__add {
+      padding: 0.5rem 1rem;
+    }
+
+    &__add input {
+      width: 2rem;
+    }
+
+    &__add button {
+      margin: 0;
+      width: 5rem;
+    }
+  }
+}

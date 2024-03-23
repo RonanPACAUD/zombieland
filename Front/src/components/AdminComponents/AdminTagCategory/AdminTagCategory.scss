@@ -1,0 +1,95 @@
+@use '@scssVariables' as v;
+
+.admin-tag-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+
+  &__container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 0.5rem 0;
+    background-color: v.$clr-light-dark;
+    text-align: left;
+
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    &__delete-button {
+      background-color: v.$clr-primary;
+      height: 2rem;
+      margin: 0.25rem;
+      width: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    &__delete-button:hover {
+      background-color: v.$clr-primary-hover;
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &__add {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+
+  &__add input {
+    width: 100%;
+    margin-right: 2rem;
+  }
+
+  &__add button {
+    background-color: v.$clr-primary;
+    height: 2rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  &__add button:hover {
+    background-color: v.$clr-primary-hover;
+    transition: background-color 0.2s ease;
+  }
+}
+
+@media (max-width: 750px) {
+  .admin-tag-category {
+    &__add {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__add input {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .admin-tag-category {
+    &__item {
+      padding: 1rem;
+    }
+  }
+}

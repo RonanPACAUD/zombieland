@@ -1,0 +1,34 @@
+@use '@scssVariables' as v;
+
+.admin-greetings {
+  padding-top: 6.5rem;
+  text-align: center;
+
+  &__nav-link * {
+    margin: 0 2rem;
+    color: v.$clr-primary;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.admin-greetings h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .admin-greetings {
+    &__nav-link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 10%;
+    }
+
+    &__nav-link * {
+      margin: 0.5rem 1rem;
+
+    }
+  }
+}

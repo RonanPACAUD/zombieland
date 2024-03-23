@@ -1,0 +1,77 @@
+@use '@scssVariables' as v;
+
+.inscription {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem 1rem 3rem;
+
+    &__underline {
+        filter: invert(16%) sepia(23%) saturate(4857%) hue-rotate(337deg) brightness(108%) contrast(131%);
+        width: 17rem;
+        transform: rotate(180deg);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__input-container {
+            display: flex;
+            margin-top: 2rem;
+
+            &__first-column {
+                margin-right: 4rem;
+            }
+        }
+
+        &__input-container {
+            text-align: center;
+        }
+
+        &__message {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            width: 30rem;
+        }
+
+        &__button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+    }
+}
+
+.inscription input {
+    display: block;
+    background-color: v.$clr-ultra-light;
+    width: 16rem;  
+}
+
+.inscription h1 {
+    font-size: 3rem;
+}
+
+.inscription h3 {
+    color: v.$clr-primary;
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+@media (max-width: 800px) {
+    .inscription {
+        &__form {
+            &__input-container {
+                flex-direction: column;
+
+                &__first-column {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

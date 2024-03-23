@@ -1,0 +1,287 @@
+@use '@scssVariables' as v;
+
+.profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__main-title {
+    right: 10%;
+    top: 45%;
+
+    &__underline {
+      width: 23rem;
+    }
+  }
+
+  &__main-title p {
+    width: 29rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem 0;
+    text-align: center;
+
+    &__profil-container {
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.4rem 2rem;
+        margin-bottom: 0.5rem;
+        background-color: v.$clr-light-dark;
+        text-align: left;
+        position: relative;
+      }
+    }
+
+    &__profil-container span {
+      color: v.$clr-primary;
+      width: 10rem;
+      font-size: 1.3rem;
+    }
+
+    &__option-container {
+      display: flex;
+      justify-content: center;
+
+      &__option-button {
+        background-color: v.$clr-primary;
+        height: 2.5rem;
+        margin: 2rem 1rem 0 1rem;
+        width: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      &__option-button:hover {
+        background-color: v.$clr-primary-hover;
+        transition: background-color 0.2s ease;
+      }
+    }
+  }
+
+  &__list-container {
+    width: 100%;
+    margin: 3rem 0 5rem 0;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      margin: 0.5rem 0;
+      background-color: v.$clr-light-dark;
+      text-align: left;
+      position: relative;
+
+      &__booking {
+        width: 100%;
+        color: v.$clr-primary;
+      }
+
+      &__booking span {
+        float: right;
+        color: v.$clr-ultra-light;
+      }
+
+      &__buttons-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3rem;
+        
+        &__expiration-message {
+          margin: 0.5rem 0 1rem 0;
+          text-align: center;
+        }
+
+        &__button {
+          background-color: v.$clr-primary;
+          height: 2.5rem;
+          margin: 0.25rem;
+          width: 6rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          position: relative;
+        }
+
+        &__butto:hover {
+          background-color: v.$clr-primary-hover;
+          transition: background-color 0.2s ease;
+        }
+
+        &__expiration-block {
+          position: absolute;
+          width: 100%;
+          background-color: v.$clr-classified-background;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1720px) {
+  .profil {
+    &__main {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .profil {
+    &__main-title {
+      &__underline {
+        width: 20rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      width: 23rem;
+    }
+
+    &__main {
+      width: 75%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .profil {
+    &__main-title {
+      &__underline {
+        width: 18rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+      width: 20rem;
+    }
+
+    &__main {
+      width: 85%;
+      flex-direction: column;
+      align-items: center;
+
+      &__profil-container {
+        width: 100%;
+      }
+
+      &__option-container {
+        margin-left: 0;
+        margin-top: 2rem;
+        display: flex;
+
+        &__option-button {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .profil {
+    &__list-container {
+      width: 100%;
+
+      &__item {
+        flex-direction: column;
+        padding: 2rem;
+
+        &__booking {
+          margin: auto;
+        }
+
+        &__buttons-container {
+          margin-left: 0;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .profil {
+    &__main-title {
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 20rem;
+
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .profil {
+    &__main-title {
+      width: 15rem;
+
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+
+    &__main {
+      &__profil-container {
+        &__item {
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+
+      &__profil-container span {
+        text-align: center;
+      }
+
+      &__option-container {
+        flex-direction: column;
+
+        &__option-button {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__list-container {
+      &__item {
+        padding: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use '@scssVariables' as v;
+
+.footer {
+    background-color: v.$clr-ultra-dark;
+    color: v.$clr-ultra-light;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 7rem;
+        padding: 5rem;
+        margin: auto;
+
+        &__logo {
+            width: 8rem;
+            transform: rotate(-5deg);
+        }
+
+        &__social-network-container {
+            display: flex;
+        }
+
+        &__social-network-container img{
+            filter: invert(100%);
+            width: 2rem;
+            margin: 2rem 1.5rem 0 1.5rem;
+            cursor: pointer;
+        }
+
+    }  
+}

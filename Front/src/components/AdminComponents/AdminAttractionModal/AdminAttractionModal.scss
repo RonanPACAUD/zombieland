@@ -1,0 +1,169 @@
+@use '@scssVariables' as v;
+
+.admin-attraction-modal {
+  text-align: center;
+
+  &__main-container {
+    display: flex;
+  }
+
+  &__form {
+    width: 35rem;
+
+    &__name input {
+      width: 100%;
+    }
+
+    &__description textarea {
+      width: 100%;
+      height: 15rem;
+      resize: none;
+    }
+
+    &__category select {
+      width: 100%;
+    }
+
+    &__tag {
+      text-align: left;
+      margin-left: 3rem;
+
+      &__tag-list {
+        width: 100%;
+
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          margin: 0.5rem 0;
+        }
+
+        &__item button img {
+          width: 1rem;
+          filter: invert(100%);
+          cursor: pointer;
+        }
+      }
+
+      &__add-tag {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        &__label {
+          font-size: 1.3rem;
+          color: v.$clr-primary;
+        }
+      }
+    }
+
+    &__pictures {
+      width: fit-content;
+
+      &__list-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 17.5rem;
+
+        &__item {
+          position: relative;
+
+          &__close-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.1rem;
+            border-radius: 100%;
+            background-color: v.$clr-ultra-light;
+            cursor: pointer;
+          }
+
+          &__close-button img {
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+        }
+      }
+
+      &__list-container img {
+        width: 3rem;
+        margin: 0.25rem;
+      }
+
+      &__add-picture-button {
+        margin: 2rem 0;
+        background-color: transparent;
+      }
+
+      &__add-picture-button input {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.admin-attraction-modal h2 {
+  margin: 0;
+}
+
+.admin-attraction-modal h3 {
+  margin: 1rem 0 0.5rem 0;
+  text-align: left;
+}
+
+input[type='file'] {
+  color: transparent;
+}
+
+input[type='file']::file-selector-button {
+  display: flex;
+  padding: 0 1rem;
+  height: 2.5rem;
+  color: v.$clr-ultra-light;
+  cursor: pointer;
+  background-color: v.$clr-primary;
+  border: none;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type='file']::file-selector-button:hover {
+  background-color: v.$clr-primary-hover;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 1000px) {
+  .admin-attraction-modal {
+    &__main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__form {
+      text-align: center;
+      width: 100%;
+
+      &__tag {
+        margin-left: 0;
+      }
+
+      &__pictures {
+        &__list-container {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .admin-attraction-modal h3 {
+    text-align: center;
+  }
+
+  input[type='file']::file-selector-button {
+    margin: auto;
+  }
+}

@@ -1,0 +1,147 @@
+@use '@scssVariables' as v;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__main-title {
+    left: 15%;
+    top: 40%;
+
+    &__underline {
+      width: 30rem;
+    }
+  }
+
+  &__main-title p {
+    width: 33rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__form-section {
+    text-align: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: 3rem 0 5rem 0;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      margin: 3rem 0 5rem 0;
+
+      &__subject {
+        background-color: v.$clr-ultra-light;
+        margin-bottom: 2rem;
+        padding: 0.7rem;
+        width: 100%;
+      }
+
+      &__content {
+        resize: none;
+        height: 20rem;
+        padding: 0.7rem;
+        width: 100%;
+      }
+
+      &__message {
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: v.$clr-primary;
+      }
+
+      &__submit-button {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1720px) {
+  .contact {
+    &__form-section {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    &__main-title {
+      &__underline {
+        width: 28rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      width: 29rem;
+    }
+
+    &__form-section {
+      width: 75%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    &__main-title {
+      &__underline {
+        width: 24rem;
+      }
+    }
+
+    &__main-title p {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+      width: 26rem;
+    }
+
+    &__form-section {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+     &__main-title {
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__form-section {
+
+      &__form {
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    &__main-title {
+      &__underline {
+        width: 100%;
+      }
+    }
+
+    &__main-title p {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+}
