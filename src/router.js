@@ -15,7 +15,7 @@ const pictureController = require("./controllers/pictureController");
 const router = Router();
 
 
-router.get("*", async (req, res) => {
+router.get("/", async (req, res) => {
     let filePath = path.join(__dirname, '../Front/dist/index.html')
     res.sendFile(filePath)
 });
