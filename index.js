@@ -20,8 +20,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-
-
 const app = express();
 
 app.use(express.static('Front/dist'));
