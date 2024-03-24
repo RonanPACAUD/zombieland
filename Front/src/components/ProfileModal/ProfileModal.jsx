@@ -1,16 +1,13 @@
 import { useDispatch } from 'react-redux';
 import './ProfileModal.scss';
 import { useSelector } from 'react-redux';
-import { resetConnectedUser } from '../../store/userSlice';
+
 
 export default function ProfileModal() {
     const dispatch = useDispatch();
 
     const selectedUser = useSelector((state) => state.user.selectedUser);
     const connectedUser = useSelector((state) => state.user.connected);
-
-    console.log(selectedUser);
-    console.log(connectedUser)
 
   return (
     <div className="profil-modal">

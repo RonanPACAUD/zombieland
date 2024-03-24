@@ -4,9 +4,6 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import attractionPicture from '../../assets/attraction-assets/Firefly creepy orageux parc attraction abandonné montagne russe brouillard brume grisaille 37698.jpg';
-import underline from '../../assets/underline/dual-underline.png';
-
 import { changeFilterValue } from '../../store/attractionSlice';
 
 import Attraction from '../Attraction/Attraction'
@@ -26,21 +23,17 @@ export default function Attractions() {
 
   const filterValue = useSelector((state) => state.attraction.filter);
 
-
-  console.log(filterValue);
-  console.log(attractionsList.length)
-
   return (
     <div className="attractions">
       <img
-        src={attractionPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20creepy%20orageux%20parc%20attraction%20abandonn%C3%A9%20montagne%20russe%20brouillard%20brume%20grisaille%2037698.jpg'}
         alt="Rollercoaster"
         className="attractions__picture main-picture"
       />
       <div className="attractions__main-title main-title">
         <h1>Nos Attractions</h1>
         <img
-          src={underline}
+          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
           alt="underline"
           className="attractions__main-title__underline underline"
         />

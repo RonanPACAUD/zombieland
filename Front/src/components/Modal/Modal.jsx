@@ -1,7 +1,6 @@
 import Connexion from '../Connexion/Connexion';
 import './Modal.scss';
 
-import closeButton from '../../assets/icon/close.png';
 import { toogleMainModal } from '../../store/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Inscription from '../Inscription/Inscription';
@@ -47,7 +46,7 @@ export default function Modal() {
             dispatch(toogleMainModal());
           }}
         >
-          <img src={closeButton} alt="Close button" />
+          <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="Close button" />
         </button>
         {connexionModalIsOpen && <Connexion />}
         {inscriptionModalIsOpen && <Inscription />}

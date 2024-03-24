@@ -1,18 +1,15 @@
 import './Bookings.scss';
 
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 import Calendar from 'react-calendar';
-import bookingsPicture from '../../assets/booking-assets/Firefly salle de restaurant sombre brouillard brumeux familial peur lowkey 47898.jpg';
-import underline from '../../assets/underline/dual-underline.png';
-
 import 'react-calendar/dist/Calendar.css';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/fr';
 
 import { changeInputValue } from '../../store/bookingSlice';
-import { useEffect } from 'react';
 
 dayjs.locale('fr');
 
@@ -52,14 +49,14 @@ export default function Bookings() {
   return (
     <div className="bookings">
       <img
-        src={bookingsPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20salle%20de%20restaurant%20sombre%20brouillard%20brumeux%20familial%20peur%20lowkey%2047898.jpg'}
         alt="Zombie"
         className="bookings__picture main-picture"
       />
       <div className="bookings__main-title main-title">
         <h1>Réservez maintenant</h1>
         <img
-          src={underline}
+          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
           alt="underline"
           className="bookings__main-title__underline underline"
         />

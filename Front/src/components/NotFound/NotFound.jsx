@@ -1,12 +1,10 @@
 import './NotFound.scss';
 
-import notFoundPicture from '../../assets/notFound-assets/zombie-parade-2.png';
-
 export default function NotFound() {
   return (
     <div className="not-found">
       <img
-        src={notFoundPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/zombie-parade-2.png'}
         alt="Zombie"
         className="not-found__picture main-picture"
       ></img>

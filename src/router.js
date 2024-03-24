@@ -77,5 +77,4 @@ router.post('/picture', authMiddleware.checkToken, authMiddleware.checkRole, pic
 router.delete('/picture/:id', authMiddleware.checkToken, authMiddleware.checkRole, pictureController.deletePicture);
 
 
-
 module.exports = router;

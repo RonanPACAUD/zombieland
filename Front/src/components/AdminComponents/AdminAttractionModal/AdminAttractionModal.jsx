@@ -4,8 +4,6 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import closed from '../../../assets/icon/close.png';
-
 export default function AdminAttractionModal() {
   const dispatch = useDispatch();
 
@@ -100,7 +98,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={closed} alt="Closed" />
+                    <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="Closed" />
                   </button>
                 </div>
               ))}
@@ -146,7 +144,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={closed} />
+                    <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="closed" />
                   </button>
                 </div>
               ))}

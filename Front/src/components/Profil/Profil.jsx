@@ -1,7 +1,5 @@
 import './Profil.scss';
 
-import profilPicture from '../../assets/profil-assets/Firefly détaillé parc attraction restaurant fast food rouge brume orageux sombre vue exterieure mont (2).jpg';
-import underline from '../../assets/underline/dual-underline.png';
 import { useSelector } from 'react-redux';
 import { showModifyProfilModal, showResetPasswordModal } from '../../store/modalSlice';
 import { useDispatch } from 'react-redux';
@@ -11,8 +9,6 @@ export default function Profil() {
   const dispatch = useDispatch();
 
   const connectedUser = useSelector((state) => state.user.connected);
-
-  console.log(JSON.parse(localStorage.getItem('connectedUser')).id);
 
   useEffect(() => {
     dispatch({ type: 'GET_ALL_USERS' });
@@ -73,14 +69,14 @@ export default function Profil() {
   return (
     <div className="profil">
       <img
-        src={profilPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20d%C3%A9taill%C3%A9%20parc%20attraction%20restaurant%20fast%20food%20rouge%20brume%20orageux%20sombre%20vue%20exterieure%20mont%20(2).jpg'}
         alt="Zombie"
         className="profil__picture main-picture"
       />
       <div className="profil__main-title main-title">
         <h1>Mon Profil</h1>
         <img
-          src={underline}
+          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
           alt="underline"
           className="profil__main-title__underline underline"
         />

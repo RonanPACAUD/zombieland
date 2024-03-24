@@ -1,7 +1,7 @@
 import './Inscription.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import underline from '../../assets/underline/dual-underline.png';
+
 import { changeInputValue } from '../../store/inscriptionSlice';
 
 export default function Inscription() {
@@ -12,7 +12,7 @@ export default function Inscription() {
   return (
     <div className="inscription">
       <h1>Inscription</h1>
-      <img src={underline} alt="underline" className="inscription__underline" />
+      <img src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'} alt="underline" className="inscription__underline" />
       <form
         className="inscription__form"
         onSubmit={(e) => {

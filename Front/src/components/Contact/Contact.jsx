@@ -1,8 +1,6 @@
 import './Contact.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import contactPicture from '../../assets/contact-assets/dead-encounter-retouche_05.png';
-import underline from '../../assets/underline/dual-underline.png';
 import {
   changeInputValue,
 } from '../../store/messageSlice';
@@ -18,14 +16,14 @@ export default function Contact() {
   return (
     <div className="contact">
       <img
-        src={contactPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/dead-encounter-retouche_05.png'}
         alt="Zombie"
         className="contact__picture main-picture"
       />
       <div className="contact__main-title main-title">
         <h1>Contactez-nous</h1>
         <img
-          src={underline}
+          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
           alt="underline"
           className="contact__main-title__underline underline"
         />

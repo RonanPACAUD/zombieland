@@ -2,8 +2,7 @@ import './Header.scss';
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import logo from '../../assets/logo/ZombieLand.png';
-import burgerMenu from '../../assets/icon/menu.png';
+
 import { toogleBurgerMenu, toogleMainModal } from '../../store/modalSlice';
 import { useSelector } from 'react-redux';
 import { resetConnectedUser } from '../../store/userSlice';
@@ -23,7 +22,7 @@ export default function Header() {
       <div className="header__container">
         <div className="header__container__logo-container">
           <Link to="/" className="inactive">
-            <img src={logo} alt="Logo" className="header__container__logo-container__logo" />
+            <img src={'https://storage.googleapis.com/zombieland-assets/ZombieLand.png'} alt="Logo" className="header__container__logo-container__logo" />
           </Link>
         </div>
         <Media query={{ minWidth: 1021 }}>
@@ -74,7 +73,7 @@ export default function Header() {
               }}
             >
               <img
-                src={burgerMenu}
+                src={'https://storage.googleapis.com/zombieland-assets/menu.png'}
                 alt="Burger Menu"
                 className="header__container__burger-menu__button__burger-icon"
               />

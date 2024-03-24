@@ -4,11 +4,6 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import greetingPicture from '../../assets/greeting-assets/dead-encounter-retouche_03.png';
-import parkMap from '../../assets/greeting-assets/parkMap.jpg';
-import locationMap from '../../assets/map/image.png';
-import underline from '../../assets/underline/dual-underline.png';
-
 export default function Greeting() {
   const dispatch = useDispatch();
 
@@ -21,14 +16,14 @@ export default function Greeting() {
   return (
     <div className="greeting">
       <img
-        src={greetingPicture}
+        src={'https://storage.googleapis.com/zombieland-assets/dead-encounter-retouche_03.png'}
         alt="Zombie"
         className="greeting__picture main-picture"
       ></img>
       <div className="greeting__main-title main-title">
         <h1>Bienvenue à ZombieLand</h1>
         <img
-          src={underline}
+          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
           alt="underline"
           className="greeting__main-title__underline underline"
         />
@@ -66,7 +61,7 @@ export default function Greeting() {
         </p>
       </div>
 
-      <img src={parkMap} className="greeting__park-map" />
+      <img src={'https://storage.googleapis.com/zombieland-assets/parkMap.jpg'} className="greeting__park-map" />
 
       <div className="greeting__under-presentation">
         <div className="greeting__security">
@@ -126,7 +121,7 @@ export default function Greeting() {
             </div>
             <div className="greeting__practical-info__info-container__location-map-container">
               <img
-                src={locationMap}
+                src={'https://storage.googleapis.com/zombieland-assets/image.png'}
                 alt="Map Location"
                 className="greeting__practical-info__info-container__location-map-container__location-map"
               />

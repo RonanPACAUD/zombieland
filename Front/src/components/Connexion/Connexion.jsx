@@ -1,7 +1,7 @@
 import './Connexion.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import underline from '../../assets/underline/dual-underline.png';
+
 import { showInscriptionModal } from '../../store/modalSlice';
 import {
   changeInputValue,
@@ -12,12 +12,10 @@ export default function Connexion() {
 
   const inputValue = useSelector((state) => state.connexion.settings); 
 
-  console.log(inputValue)
-
   return (
     <div className="connexion">
       <h1>Connexion</h1>
-      <img src={underline} alt="underline" className="connexion__underline" />
+      <img src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'} alt="underline" className="connexion__underline" />
       <form
         className="connexion__form"
         onSubmit={(e) => {
