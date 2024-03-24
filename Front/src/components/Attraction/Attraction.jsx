@@ -26,7 +26,7 @@ export default function Attraction({
           {pictures &&
             pictures.map((picture) => (
               <div key={picture.id} className="attraction__pictures">
-                <img src={`http://localhost:3000/${picture.pictures_url}`} />
+                <img src={`https://storage.googleapis.com/zombieland-assets/${picture.pictures_url}`} />
               </div>
             ))}
         </Carousel>

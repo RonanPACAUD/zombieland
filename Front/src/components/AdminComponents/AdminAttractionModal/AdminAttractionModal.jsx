@@ -136,7 +136,7 @@ export default function AdminAttractionModal() {
                   key={picture.id}
                   className="admin-attraction-modal__form__pictures__list-container__item"
                 >
-                  <img src={`http://localhost:3000/${picture.pictures_url}`} />
+                  <img src={`https://storage.googleapis.com/zombieland-assets/${picture.pictures_url}`} />
                   <button
                     className="admin-attraction-modal__form__pictures__list-container__item__close-button"
                     onClick={() => {
