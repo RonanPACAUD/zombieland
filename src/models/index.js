@@ -30,16 +30,6 @@ Message.belongsTo(User, {
     as: "sender"
 })
 
-User.hasMany(Message, {
-    foreignKey: "receiver_id",
-    as: "messages_received"
-});
-
-Message.belongsTo(User, {
-    foreignKey: "receiver_id",
-    as: "receiver"
-})
-
 // Attraction <-> Category
 
 Category.hasMany(Attraction, {

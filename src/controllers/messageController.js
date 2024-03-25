@@ -50,7 +50,7 @@ const messageController = {
   updateMessage: async (req, res) => {
     try {
       const messageId = req.params.id;
-      const { subject, content, sender_id, receiver_id, closed } = req.body;
+      const { subject, content, sender_id, closed } = req.body;
       const message = await Message.findByPk(messageId);
       if (subject) {
         message.subject = subject;
@@ -77,7 +77,6 @@ const messageController = {
   deleteMessage: async (req, res) => {
     try {
       const messageId = req.params.id;
-      const { subject, content, sender_id, receiver_id } = req.body;
       const message = await Message.findByPk(messageId);
       await message.destroy();
       res.status(200).json("Le message a bien été supprimé");

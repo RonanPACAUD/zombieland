@@ -53,7 +53,7 @@ const messageMiddleware = (store) => (next) => (action) => {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         store.dispatch({ type: 'GET_ALL_MESSAGES'});
       });
   }
@@ -67,7 +67,7 @@ const messageMiddleware = (store) => (next) => (action) => {
       },
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         store.dispatch({ type: 'GET_ALL_MESSAGES' });
       });
   }
