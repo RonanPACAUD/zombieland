@@ -1,8 +1,12 @@
-import { updateConnectedUser, updateSelectedUser, updateUsersList } from "./userSlice";
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+
+import {
+  updateConnectedUser,
+  updateSelectedUser,
+  updateUsersList,
+} from './userSlice';
 
 const userMiddleware = (store) => (next) => (action) => {
-  const state = store.getState();
-
   if (action.type === 'GET_ALL_USERS') {
     fetch(`${apiUrl}/user`, {
       headers: {
@@ -28,7 +32,7 @@ const userMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'UPDATE_CONNECTED_USER') {
-    console.log(action.payload)
+    console.log(action.payload);
     fetch(`${apiUrl}/user/${action.payload}`, {
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -36,7 +40,7 @@ const userMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         store.dispatch(updateConnectedUser(data));
       });
   }
@@ -57,12 +61,11 @@ const userMiddleware = (store) => (next) => (action) => {
         country: action.payload.country,
       }),
     })
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
         store.dispatch(updateSelectedUser(data));
         store.dispatch({ type: 'GET_ALL_USERS' });
-
       });
   }
 
@@ -77,7 +80,6 @@ const userMiddleware = (store) => (next) => (action) => {
       .then((response) => response.json())
       .then(() => {
         store.dispatch({ type: 'GET_ALL_USERS' });
-
       });
   }
 

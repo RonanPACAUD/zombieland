@@ -5,7 +5,6 @@ const initialState = {
     subjectValue: '',
     contentValue: '',
     sender_id: 1,
-    receiver_id: 2,
     message: '',
   },
   messagesList: [],
@@ -13,7 +12,6 @@ const initialState = {
     subjectValue: '',
     contentValue: '',
     sender_id: 1,
-    receiver_id: 2,
     closed: false,
     message: '',
   },
@@ -41,7 +39,6 @@ const messageSlice = createSlice({
           subjectValue: '',
           contentValue: '',
           sender_id: 1,
-          receiver_id: 2,
           message: '',
         },
       };

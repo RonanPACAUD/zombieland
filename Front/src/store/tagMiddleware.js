@@ -1,7 +1,7 @@
 
 const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
 
-import { updateAttractionList, updateSelectedAttraction } from './attractionSlice';
+import { updateSelectedAttraction } from './attractionSlice';
 import { resetTagState, updatetagsList } from './tagSlice';
 
 const tagMiddleware = (store) => (next) => (action) => {

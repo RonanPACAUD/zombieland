@@ -19,7 +19,7 @@ const messageMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'POST_NEW_MESSAGE_TO_API') {
-    console.log(action.payload)
+    console.log('yo')
     fetch(`${apiUrl}/message`, {
       method: 'POST',
       headers: {
@@ -29,7 +29,6 @@ const messageMiddleware = (store) => (next) => (action) => {
         subject: state.message.settings.subjectValue,
         content: state.message.settings.contentValue,
         sender_id: action.payload,
-        receiver_id: state.message.settings.receiver_id,
       }),
     })
       .then((response) => {
@@ -43,8 +42,6 @@ const messageMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'MODIFY_MESSAGE_TO_API') {
-    console.log('middelware')
-
     fetch(`${apiUrl}/message/${action.payload.id}`, {
       method: 'PATCH',
       headers: {
@@ -57,7 +54,6 @@ const messageMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         store.dispatch({ type: 'GET_ALL_MESSAGES'});
       });
   }
@@ -72,7 +68,6 @@ const messageMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         store.dispatch({ type: 'GET_ALL_MESSAGES' });
       });
   }
