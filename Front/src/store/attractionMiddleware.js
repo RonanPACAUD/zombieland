@@ -5,7 +5,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
 
 
   if (action.type === 'GET_ALL_ATTRACTIONS') {
-    fetch(`${process.env.API_URL}/attraction`)
+    fetch(`https://zombieland-park.vercel.app/attraction`)
       .then((response) => response.json())
       .then((data) => {
         store.dispatch(updateAttractionList(data));
