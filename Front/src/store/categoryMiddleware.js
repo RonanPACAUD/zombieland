@@ -1,10 +1,13 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 import { resetCategoryState, updateCategoryList } from './categorySlice';
 
 const categoryMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'GET_ALL_CATEGORIES') {
-    fetch('http://localhost:3000/category')
+    fetch(`${apiUrl}/category`)
       .then((response) => response.json())
       .then((data) => {
         store.dispatch(updateCategoryList(data));
@@ -12,7 +15,7 @@ const categoryMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'POST_NEW_CATEGORY_TO_API') {
-    fetch('http://localhost:3000/category', {
+    fetch(`${apiUrl}/category`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +33,7 @@ const categoryMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'DELETE_CATEGORY') {
-    fetch(`http://localhost:3000/category/${action.payload}`, {
+    fetch(`${apiUrl}/category/${action.payload}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

@@ -1,3 +1,6 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 import { changeInputValue, resetAttractionState, updateAttractionList, updateSelectedAttraction } from './attractionSlice';
 
 const attractionMiddleware = (store) => (next) => (action) => {
@@ -5,7 +8,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
 
 
   if (action.type === 'GET_ALL_ATTRACTIONS') {
-    fetch(`https://zombieland-park.vercel.app/attraction`)
+    fetch(`${apiUrl}/attraction`)
       .then((response) => response.json())
       .then((data) => {
         store.dispatch(updateAttractionList(data));
@@ -13,7 +16,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'GET_FILTER_ATTRACTIONS') {
-    fetch(`http://localhost:3000/attraction-filter?category_id=${state.attraction.filter.category_id}&tag_search=${state.attraction.filter.tag_search}`)
+    fetch(`${apiUrl}/attraction-filter?category_id=${state.attraction.filter.category_id}&tag_search=${state.attraction.filter.tag_search}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
@@ -22,7 +25,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'GET_ONE_ATTRACTION') {
-    fetch(`http://localhost:3000/attraction/${action.payload}`)
+    fetch(`${apiUrl}/attraction/${action.payload}`)
       .then((response) => response.json())
       .then((data) => {
         store.dispatch(updateSelectedAttraction(data));
@@ -31,7 +34,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
 
   if (action.type === 'POST_NEW_ATTRACTION_TO_API') {
 
-    fetch('http://localhost:3000/attraction', {
+    fetch(`${apiUrl}/attraction`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +58,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'MODIFY_ATTRACTION_TO_API') {
-    fetch(`http://localhost:3000/attraction/${action.payload.id}`, {
+    fetch(`${apiUrl}/attraction/${action.payload.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +78,7 @@ const attractionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'DELETE_ATTRACTION') {
-    fetch(`http://localhost:3000/attraction/${action.payload}`, {
+    fetch(`${apiUrl}/attraction/${action.payload}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

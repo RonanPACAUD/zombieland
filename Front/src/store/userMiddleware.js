@@ -4,7 +4,7 @@ const userMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'GET_ALL_USERS') {
-    fetch('http://localhost:3000/user', {
+    fetch(`${apiUrl}/user`, {
       headers: {
         Authorization: localStorage.getItem('token'),
       },
@@ -16,7 +16,7 @@ const userMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'GET_ONE_USER') {
-    fetch(`http://localhost:3000/user/${action.payload}`, {
+    fetch(`${apiUrl}/user/${action.payload}`, {
       headers: {
         Authorization: localStorage.getItem('token'),
       },
@@ -29,7 +29,7 @@ const userMiddleware = (store) => (next) => (action) => {
 
   if (action.type === 'UPDATE_CONNECTED_USER') {
     console.log(action.payload)
-    fetch(`http://localhost:3000/user/${action.payload}`, {
+    fetch(`${apiUrl}/user/${action.payload}`, {
       headers: {
         Authorization: localStorage.getItem('token'),
       },
@@ -42,7 +42,7 @@ const userMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'MODIFY_USER_TO_API') {
-    fetch(`http://localhost:3000/user/${action.payload.id}`, {
+    fetch(`${apiUrl}/user/${action.payload.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const userMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'DELETE_USER') {
-    fetch(`http://localhost:3000/user/${action.payload}`, {
+    fetch(`${apiUrl}/user/${action.payload}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

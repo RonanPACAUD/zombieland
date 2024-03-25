@@ -1,10 +1,13 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 import { changeInputValue, resetMessageState, updateMessagesList } from './messageSlice';
 
 const messageMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'GET_ALL_MESSAGES') {
-    fetch('http://localhost:3000/message', {
+    fetch(`${apiUrl}/message`, {
       headers: {
         Authorization: localStorage.getItem('token'),
       },
@@ -17,7 +20,7 @@ const messageMiddleware = (store) => (next) => (action) => {
 
   if (action.type === 'POST_NEW_MESSAGE_TO_API') {
     console.log(action.payload)
-    fetch('http://localhost:3000/message', {
+    fetch(`${apiUrl}/message`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +45,7 @@ const messageMiddleware = (store) => (next) => (action) => {
   if (action.type === 'MODIFY_MESSAGE_TO_API') {
     console.log('middelware')
 
-    fetch(`http://localhost:3000/message/${action.payload.id}`, {
+    fetch(`${apiUrl}/message/${action.payload.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +63,7 @@ const messageMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'DELETE_MESSAGE') {
-    fetch(`http://localhost:3000/message/${action.payload}`, {
+    fetch(`${apiUrl}/message/${action.payload}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

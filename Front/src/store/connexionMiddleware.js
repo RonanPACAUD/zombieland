@@ -1,3 +1,6 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 import { changeInputValue, resetConnexionState } from './connexionSlice';
 import { resetInscriptionState } from './inscriptionSlice';
 import { toogleMainModal } from './modalSlice';
@@ -7,7 +10,7 @@ const connexionMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'POST_CONNEXION_DATA_TO_API') {
-    fetch('http://localhost:3000/signin', {
+    fetch(`${apiUrl}/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +36,7 @@ const connexionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'POST_CONNEXION_DATA_TO_API_FROM_INSCRIPTION') {
-    fetch('http://localhost:3000/signin', {
+    fetch(`${apiUrl}/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

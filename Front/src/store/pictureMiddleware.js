@@ -1,8 +1,11 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 const pictureMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'GET_ALL_PICTURES') {
-    fetch('http://localhost:3000/picture')
+    fetch(`${apiUrl}/picture`)
       .then((response) => response.json())
       .then((data) => {
         store.dispatch(updateAttractionList(data));
@@ -15,7 +18,7 @@ const pictureMiddleware = (store) => (next) => (action) => {
     const formData = new FormData();
     formData.append('photo', action.payload);
 
-    fetch('http://localhost:3000/upload', {
+    fetch(`${apiUrl}/upload`, {
       method: 'POST',
       body: formData,
     })
@@ -28,7 +31,7 @@ const pictureMiddleware = (store) => (next) => (action) => {
   if (action.type === 'UPLOAD_PICTURE_TO_API') {
     console.log(action.payload.name);
 
-    fetch('http://localhost:3000/picture', {
+    fetch(`${apiUrl}/picture`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +52,7 @@ const pictureMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'DELETE_PICTURE') {
-    fetch(`http://localhost:3000/picture/${action.payload.picture_id}`, {
+    fetch(`${apiUrl}/picture/${action.payload.picture_id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

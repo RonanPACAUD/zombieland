@@ -1,10 +1,13 @@
+
+const apiUrl = import.meta.env.VITE_REACT_APP_API_URL
+
 import { changeInputValue, resetInscriptionState } from './inscriptionSlice';
 
 const inscriptionMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
 
   if (action.type === 'POST_NEW_USER_TO_API') {
-    fetch('http://localhost:3000/signup', {
+    fetch(`${apiUrl}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +32,7 @@ const inscriptionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'CREATE_NEW_USER_TO_API') {
-    fetch('http://localhost:3000/signup', {
+    fetch(`${apiUrl}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +61,7 @@ const inscriptionMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'POST_RESET_PASSWORD_DATA_TO_API') {
-    fetch('http://localhost:3000/reset', {
+    fetch(`${apiUrl}/reset`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
