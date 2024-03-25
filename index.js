@@ -1,6 +1,7 @@
 const express = require("express");
 const router = require("./src/router");
 const cors = require("cors");
+const path = require('path'); 
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -25,7 +26,10 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 const app = express();
 
-app.use(express.static('Front/dist'));
+// console.log(path.join(__dirname, './Front/dist'))
+
+app.use(express.static(path.join(__dirname, './Front/dist'))); 
+app.use(express.static(path.join(__dirname, './Front/dist/assets'))); 
 
 app.use(cors("*"));
 
