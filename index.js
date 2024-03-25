@@ -26,8 +26,6 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 const app = express();
 
-// console.log(path.join(__dirname, './Front/dist'))
-
 app.use(express.static(path.join(__dirname, './Front/dist'))); 
 app.use(express.static(path.join(__dirname, './Front/dist/assets'))); 
 
