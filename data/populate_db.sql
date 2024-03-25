@@ -32,10 +32,10 @@ INSERT INTO "picture" ("pictures_url", "attraction_id") VALUES
 ('zombie-thrill-1.png', 5),
 ('zombie-thrill-2.png', 5),
 ('Firefly_bistrot_(4).jpg', 6),
-('Firefly_bistrot_28965.jpg', 6);
-('Firefly_bistrot_28965(1).jpg', 6);
-('Firefly_bistrot_36542.jpg', 6);
-('Firefly_bistrot_46849.jpg', 6);
+('Firefly_bistrot_28965.jpg', 6),
+('Firefly_bistrot_28965(1).jpg', 6),
+('Firefly_bistrot_36542.jpg', 6),
+('Firefly_bistrot_46849.jpg', 6),
 ('Firefly_bistrot_46849(1).jpg', 6);
 
 INSERT INTO "tag" ("name") VALUES

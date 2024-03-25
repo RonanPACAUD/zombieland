@@ -25,7 +25,7 @@ const messageController = {
 
       console.log(req.body)
 
-      const { subject, content, sender_id, receiver_id } = req.body;
+      const { subject, content, sender_id } = req.body;
       if (!subject) {
         res.status(400).json({ message: "Veuillez remplir le champs objet" });
       } else if (!content) {
@@ -35,7 +35,6 @@ const messageController = {
           subject,
           content,
           sender_id,
-          receiver_id,
         });
         await newMessage.save();
         res
@@ -43,6 +42,7 @@ const messageController = {
           .json({ newMessage, message: "Le message a bien été envoyé" });
       }
     } catch (error) {
+      console.log(error)
       res.status(500).json({ message: "Erreur interne du serveur" });
     }
   },

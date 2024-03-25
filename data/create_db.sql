@@ -22,7 +22,6 @@ CREATE TABLE "message" (
     "content"           TEXT NOT NULL,
     "closed"            BOOLEAN NOT NULL DEFAULT FALSE,
     "sender_id"         INTEGER NOT NULL REFERENCES "user"("id"),
-    "receiver_id"       INTEGER NOT NULL REFERENCES "user"("id"),
     "created_at"        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at"        TIMESTAMPTZ
 );
