@@ -46,8 +46,10 @@
 
 @media (max-width: 1200px) {
   .attraction {
+    margin: 4rem 0;
+
     &__info {
-      margin: 0 3rem;
+      margin: 0 3rem
     }
   }
 }
@@ -95,7 +97,6 @@
 
 @media (max-width: 700px) {
   .attraction {
-
     &__carousel {
       width: 85%;
     }

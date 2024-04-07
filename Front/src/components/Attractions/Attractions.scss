@@ -29,6 +29,7 @@
     max-width: 1300px;
     width: 100%;
     margin-top: 4rem;
+    background-color: blue;
   }
 
   &__filter-bar * {
@@ -106,6 +107,14 @@
       margin-top: 0.5rem;
       width: 25rem;
       text-align: center;
+    }
+
+    &__filter-bar form {
+      flex-direction: column;
+    }
+
+    &__filter-bar * {
+      margin: 0.5rem 1rem;
     }
   }
 }

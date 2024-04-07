@@ -21,9 +21,15 @@ const bookingController = {
   },
 
   createBooking: async (req, res) => {
+    console.log(req.body)
+
     try {
       const { start_date, duration, nb_people, hotel, total, user_id } =
         req.body;
+
+      console.log(duration, hotel);
+
+
       if (!start_date) {
         res.status(400).json({ message: "Veuillez définir une date d'arrivée" });
       } else if (duration === 1 && hotel) {
