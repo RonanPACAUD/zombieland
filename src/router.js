@@ -14,24 +14,10 @@ const pictureController = require("./controllers/pictureController");
 
 const router = Router();
 
-
-
-
-// let filePath = path.join(__dirname, '../Front/dist/index.html')
-// console.log(filePath)
-
-
-// router.use((req, res, next) => {
-//     let filePath = path.join(__dirname, '../Front/dist/index.html')
-//     res.sendFile(filePath, (err) => {
-//         if (err) {
-//             console.error("Erreur lors de l'envoi du fichier HTML :", err);
-//             res.status(err.status || 500).send('Erreur lors du chargement de la page');
-//         }
-//     });
-// });
-
-// router.use((req, res, next) => {console.log("coucou2"); next();})
+router.use((req, res, next) => {
+    let filePath = path.join(__dirname, '../Front/dist/index.html')
+    res.sendFile(filePath)
+});
 
 // User Routes
 router.get("/user", authMiddleware.checkToken, userController.getAllUsers);
