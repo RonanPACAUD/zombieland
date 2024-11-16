@@ -69,14 +69,14 @@ export default function Profil() {
   return (
     <div className="profil">
       <img
-        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20d%C3%A9taill%C3%A9%20parc%20attraction%20restaurant%20fast%20food%20rouge%20brume%20orageux%20sombre%20vue%20exterieure%20mont%20(2).jpg'}
+        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/Firefly_d%C3%A9taill%C3%A9_parc_attraction_restaurant_fast_food_rouge_brume_orageux_sombre_vue_exterieure_mont_2.jpg'}
         alt="Zombie"
         className="profil__picture main-picture"
       />
       <div className="profil__main-title main-title">
         <h1>Mon Profil</h1>
         <img
-          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
+          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'}
           alt="underline"
           className="profil__main-title__underline underline"
         />

@@ -15,8 +15,8 @@ export default function Connexion() {
   return (
     <div className="connexion">
       <h1>Connexion</h1>
-      <img src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'} alt="underline" className="connexion__underline" />
-      <form
+      <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'} alt="underline" className="connexion__underline" />
+      <form 
         className="connexion__form"
         onSubmit={(e) => {
           e.preventDefault();

@@ -12,7 +12,7 @@ export default function Inscription() {
   return (
     <div className="inscription">
       <h1>Inscription</h1>
-      <img src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'} alt="underline" className="inscription__underline" />
+      <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'} alt="underline" className="inscription__underline" />
       <form
         className="inscription__form"
         onSubmit={(e) => {

@@ -22,7 +22,7 @@ export default function Header() {
       <div className="header__container">
         <div className="header__container__logo-container">
           <Link to="/" className="inactive">
-            <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763118/ZombieLand_l5t03q.png'} alt="Logo" className="header__container__logo-container__logo" />
+            <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763118/ZombieLand'} alt="Logo" className="header__container__logo-container__logo" />
           </Link>
         </div>
         <Media query={{ minWidth: 1021 }}>
@@ -73,7 +73,7 @@ export default function Header() {
               }}
             >
               <img
-                src={'https://storage.googleapis.com/zombieland-assets/menu.png'}
+                src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/menu.png'}
                 alt="Burger Menu"
                 className="header__container__burger-menu__button__burger-icon"
               />

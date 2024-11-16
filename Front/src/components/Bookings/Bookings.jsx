@@ -49,14 +49,14 @@ export default function Bookings() {
   return (
     <div className="bookings">
       <img
-        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20salle%20de%20restaurant%20sombre%20brouillard%20brumeux%20familial%20peur%20lowkey%2047898.jpg'}
+        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/Firefly_salle_de_restaurant_sombre_brouillard_brumeux_familial_peur_lowkey_47898.jpg'}
         alt="Zombie"
         className="bookings__picture main-picture"
       />
       <div className="bookings__main-title main-title">
         <h1>Réservez maintenant</h1>
         <img
-          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
+          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/dual-underline.png'}
           alt="underline"
           className="bookings__main-title__underline underline"
         />

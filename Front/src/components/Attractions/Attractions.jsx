@@ -26,7 +26,7 @@ export default function Attractions() {
   return (
     <div className="attractions">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763054/Firefly_creepy_orageux_parc_attraction_abandonn%C3%A9_montagne_russe_brouillard_brume_grisaille_37698_pcwpbm.jpg'}
+        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763054/Firefly_creepy_orageux_parc_attraction_abandonn%C3%A9_montagne_russe_brouillard_brume_grisaille_37698.jpg'}
         alt="Rollercoaster"
         className="attractions__picture main-picture"
       />

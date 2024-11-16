@@ -62,7 +62,7 @@ export default function AdminAttraction() {
                   {attraction.pictures.map((picture) => (
                     <img
                       key={picture.id}
-                      src={`https://storage.googleapis.com/zombieland-assets/${picture.pictures_url}`}
+                      src={`https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/${picture.pictures_url}`}
                     />
                   ))}
                 </div>

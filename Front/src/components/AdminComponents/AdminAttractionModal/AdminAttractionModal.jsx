@@ -98,7 +98,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="Closed" />
+                    <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/close.png'} alt="Closed" />
                   </button>
                 </div>
               ))}
@@ -134,7 +134,7 @@ export default function AdminAttractionModal() {
                   key={picture.id}
                   className="admin-attraction-modal__form__pictures__list-container__item"
                 >
-                  <img src={`https://storage.googleapis.com/zombieland-assets/${picture.pictures_url}`} />
+                  <img src={`https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/${picture.pictures_url}`} />
                   <button
                     className="admin-attraction-modal__form__pictures__list-container__item__close-button"
                     onClick={() => {
@@ -144,7 +144,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="closed" />
+                    <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/close.png'} alt="closed" />
                   </button>
                 </div>
               ))}

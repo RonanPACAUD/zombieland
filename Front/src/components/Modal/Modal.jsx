@@ -46,7 +46,7 @@ export default function Modal() {
             dispatch(toogleMainModal());
           }}
         >
-          <img src={'https://storage.googleapis.com/zombieland-assets/close.png'} alt="Close button" />
+          <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/close.png'} alt="Close button" />
         </button>
         {connexionModalIsOpen && <Connexion />}
         {inscriptionModalIsOpen && <Inscription />}
