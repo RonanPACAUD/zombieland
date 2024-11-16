@@ -24,7 +24,7 @@ import NotFound from '../NotFound/NotFound';
 
 import { updateConnectedUser } from '../../store/userSlice';
 
-function App() {
+export default function App() {
   const dispatch = useDispatch();
 
   const mainModalIsOpen = useSelector((state) => state.modal.mainModalIsOpen);
@@ -74,5 +74,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

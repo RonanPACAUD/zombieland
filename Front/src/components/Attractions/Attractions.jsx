@@ -26,14 +26,14 @@ export default function Attractions() {
   return (
     <div className="attractions">
       <img
-        src={'https://storage.googleapis.com/zombieland-assets/Firefly%20creepy%20orageux%20parc%20attraction%20abandonn%C3%A9%20montagne%20russe%20brouillard%20brume%20grisaille%2037698.jpg'}
+        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763054/Firefly_creepy_orageux_parc_attraction_abandonn%C3%A9_montagne_russe_brouillard_brume_grisaille_37698_pcwpbm.jpg'}
         alt="Rollercoaster"
         className="attractions__picture main-picture"
       />
       <div className="attractions__main-title main-title">
         <h1>Nos Attractions</h1>
         <img
-          src={'https://storage.googleapis.com/zombieland-assets/dual-underline.png'}
+          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763162/dual-underline.png'}
           alt="underline"
           className="attractions__main-title__underline underline"
         />

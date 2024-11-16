@@ -22,7 +22,7 @@ export default function Header() {
       <div className="header__container">
         <div className="header__container__logo-container">
           <Link to="/" className="inactive">
-            <img src={'https://storage.googleapis.com/zombieland-assets/ZombieLand.png'} alt="Logo" className="header__container__logo-container__logo" />
+            <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763118/ZombieLand_l5t03q.png'} alt="Logo" className="header__container__logo-container__logo" />
           </Link>
         </div>
         <Media query={{ minWidth: 1021 }}>
