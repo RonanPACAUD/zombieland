@@ -65,7 +65,7 @@ function Greeting() {
       </div>
 
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763046/parkMap_lswwhr.jpg'}
+        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763046/parkMap.jpg'}
         className="greeting__park-map"
       />
 
@@ -128,7 +128,7 @@ function Greeting() {
             <div className="greeting__practical-info__info-container__location-map-container">
               <img
                 src={
-                  'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/image_s7wabo.png'
+                  'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/image.png'
                 }
                 alt="Map Location"
                 className="greeting__practical-info__info-container__location-map-container__location-map"
