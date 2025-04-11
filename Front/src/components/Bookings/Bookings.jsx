@@ -11,6 +11,8 @@ import 'dayjs/locale/fr';
 
 import { changeInputValue } from '../../store/bookingSlice';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 dayjs.locale('fr');
 
 export default function Bookings() {
@@ -49,14 +51,14 @@ export default function Bookings() {
   return (
     <div className="bookings">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/Firefly_salle_de_restaurant_sombre_brouillard_brumeux_familial_peur_lowkey_47898.jpg'}
+        src={`${cloudBaseUrl}Firefly_salle_de_restaurant_sombre_brouillard_brumeux_familial_peur_lowkey_47898.jpg`}
         alt="Zombie"
         className="bookings__picture main-picture"
       />
       <div className="bookings__main-title main-title">
         <h1>Réservez maintenant</h1>
         <img
-          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/dual-underline.png'}
+          src={`${cloudBaseUrl}dual-underline.png`}
           alt="underline"
           className="bookings__main-title__underline underline"
         />

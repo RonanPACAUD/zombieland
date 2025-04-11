@@ -3,13 +3,13 @@ import './Greeting.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-function Greeting() {
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
 
+function Greeting() {
   const dispatch = useDispatch();
 
-  
   const priceList = useSelector((state) => state.price.priceList);
-  
+
   useEffect(() => {
     dispatch({ type: 'GET_PRICES_FROM_API' });
   }, []);
@@ -17,16 +17,14 @@ function Greeting() {
   return (
     <div className="greeting">
       <img
-        src={
-          'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763052/dead-encounter-retouche_03.png'
-        }
+        src={`${cloudBaseUrl}dead-encounter-retouche_03.png`}
         alt="Zombie"
         className="greeting__picture main-picture"
-      ></img>
+      />
       <div className="greeting__main-title main-title">
         <h1>Bienvenue à ZombieLand</h1>
         <img
-          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763162/dual-underline.png'}
+          src={`${cloudBaseUrl}dual-underline.png`}
           alt="underline"
           className="greeting__main-title__underline underline"
         />
@@ -64,10 +62,7 @@ function Greeting() {
         </p>
       </div>
 
-      <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763046/parkMap.jpg'}
-        className="greeting__park-map"
-      />
+      <img src={`${cloudBaseUrl}parkMap.jpg`} className="greeting__park-map" />
 
       <div className="greeting__under-presentation">
         <div className="greeting__security">
@@ -127,9 +122,7 @@ function Greeting() {
             </div>
             <div className="greeting__practical-info__info-container__location-map-container">
               <img
-                src={
-                  'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/image.png'
-                }
+                src={`${cloudBaseUrl}image.png`}
                 alt="Map Location"
                 className="greeting__practical-info__info-container__location-map-container__location-map"
               />
@@ -141,4 +134,4 @@ function Greeting() {
   );
 }
 
-export default Greeting
+export default Greeting;

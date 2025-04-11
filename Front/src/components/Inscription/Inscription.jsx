@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { changeInputValue } from '../../store/inscriptionSlice';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Inscription() {
   const dispatch = useDispatch();
 
@@ -12,7 +14,11 @@ export default function Inscription() {
   return (
     <div className="inscription">
       <h1>Inscription</h1>
-      <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'} alt="underline" className="inscription__underline" />
+      <img
+        src={`${cloudBaseUrl}dual-underline.png`}
+        alt="underline"
+        className="inscription__underline"
+      />
       <form
         className="inscription__form"
         onSubmit={(e) => {

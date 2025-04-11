@@ -1,10 +1,12 @@
 import './NotFound.scss';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function NotFound() {
   return (
     <div className="not-found">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/zombie-parade-2.png'}
+        src={`${cloudBaseUrl}zombie-parade-2.png`}
         alt="Zombie"
         className="not-found__picture main-picture"
       ></img>

@@ -10,6 +10,8 @@ import 'dayjs/locale/fr';
 import { changeInputValue } from '../../../store/bookingSlice';
 import { useEffect } from 'react';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 dayjs.locale('fr');
 
 export default function AdminBookingModal() {

@@ -2,6 +2,8 @@ import './Attraction.scss';
 
 import { Carousel } from 'react-responsive-carousel';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Attraction({
   name,
   description,
@@ -26,7 +28,7 @@ export default function Attraction({
           {pictures &&
             pictures.map((picture) => (
               <div key={picture.id} className="attraction__pictures">
-                <img src={`https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763052/${picture.pictures_url}`} />
+                <img src={`${cloudBaseUrl}${picture.pictures_url}`} />
               </div>
             ))}
         </Carousel>

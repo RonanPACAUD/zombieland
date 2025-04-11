@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function AdminAttractionModal() {
   const dispatch = useDispatch();
 
@@ -98,7 +100,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/close.png'} alt="Closed" />
+                    <img src={`${cloudBaseUrl}close.png`} alt="Closed" />
                   </button>
                 </div>
               ))}
@@ -134,7 +136,7 @@ export default function AdminAttractionModal() {
                   key={picture.id}
                   className="admin-attraction-modal__form__pictures__list-container__item"
                 >
-                  <img src={`https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/${picture.pictures_url}`} />
+                  <img src={`${cloudBaseUrl}${picture.pictures_url}`} />
                   <button
                     className="admin-attraction-modal__form__pictures__list-container__item__close-button"
                     onClick={() => {
@@ -144,7 +146,7 @@ export default function AdminAttractionModal() {
                       });
                     }}
                   >
-                    <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/close.png'} alt="closed" />
+                    <img src={`${cloudBaseUrl}close.png`} alt="closed" />
                   </button>
                 </div>
               ))}

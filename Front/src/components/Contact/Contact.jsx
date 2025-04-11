@@ -5,6 +5,8 @@ import {
   changeInputValue,
 } from '../../store/messageSlice';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Contact() {
   const dispatch = useDispatch();
 
@@ -16,14 +18,14 @@ export default function Contact() {
   return (
     <div className="contact">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dead-encounter-retouche_05.png'}
+        src={`${cloudBaseUrl}dead-encounter-retouche_05.png`}
         alt="Zombie"
         className="contact__picture main-picture"
       />
       <div className="contact__main-title main-title">
         <h1>Contactez-nous</h1>
         <img
-          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'}
+          src={`${cloudBaseUrl}dual-underline.png`}
           alt="underline"
           className="contact__main-title__underline underline"
         />

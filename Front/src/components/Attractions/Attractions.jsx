@@ -6,7 +6,9 @@ import { useDispatch } from 'react-redux';
 
 import { changeFilterValue } from '../../store/attractionSlice';
 
-import Attraction from '../Attraction/Attraction'
+import Attraction from '../Attraction/Attraction';
+
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
 
 export default function Attractions() {
   const dispatch = useDispatch();
@@ -26,14 +28,14 @@ export default function Attractions() {
   return (
     <div className="attractions">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763054/Firefly_creepy_orageux_parc_attraction_abandonn%C3%A9_montagne_russe_brouillard_brume_grisaille_37698.jpg'}
+        src={`${cloudBaseUrl}Firefly_creepy_orageux_parc_attraction_abandonn%C3%A9_montagne_russe_brouillard_brume_grisaille_37698.jpg`}
         alt="Rollercoaster"
         className="attractions__picture main-picture"
       />
       <div className="attractions__main-title main-title">
         <h1>Nos Attractions</h1>
         <img
-          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763162/dual-underline.png'}
+          src={`${cloudBaseUrl}dual-underline.png`}
           alt="underline"
           className="attractions__main-title__underline underline"
         />

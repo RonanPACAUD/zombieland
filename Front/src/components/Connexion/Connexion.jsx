@@ -3,20 +3,24 @@ import './Connexion.scss';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { showInscriptionModal } from '../../store/modalSlice';
-import {
-  changeInputValue,
-} from '../../store/connexionSlice';
+import { changeInputValue } from '../../store/connexionSlice';
+
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
 
 export default function Connexion() {
   const dispatch = useDispatch();
 
-  const inputValue = useSelector((state) => state.connexion.settings); 
+  const inputValue = useSelector((state) => state.connexion.settings);
 
   return (
     <div className="connexion">
       <h1>Connexion</h1>
-      <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'} alt="underline" className="connexion__underline" />
-      <form 
+      <img
+        src={`${cloudBaseUrl}dual-underline.png`}
+        alt="underline"
+        className="connexion__underline"
+      />
+      <form
         className="connexion__form"
         onSubmit={(e) => {
           e.preventDefault();
@@ -30,7 +34,7 @@ export default function Connexion() {
           maxLength="255"
           value={inputValue.emailValue}
           onChange={(e) => {
-            dispatch(changeInputValue({emailValue: e.target.value}));
+            dispatch(changeInputValue({ emailValue: e.target.value }));
           }}
         />
         <h3>Mot de passe</h3>
@@ -40,7 +44,7 @@ export default function Connexion() {
           maxLength="30"
           value={inputValue.passwordValue}
           onChange={(e) => {
-            dispatch(changeInputValue({passwordValue: e.target.value}));
+            dispatch(changeInputValue({ passwordValue: e.target.value }));
           }}
         />
         <div className="connexion__form__message">{inputValue.message}</div>

@@ -3,6 +3,8 @@ import './AdminMessage.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function AdminMessage() {
   const dispatch = useDispatch();
 

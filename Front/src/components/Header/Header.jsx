@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import Media from 'react-media';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -22,7 +24,11 @@ export default function Header() {
       <div className="header__container">
         <div className="header__container__logo-container">
           <Link to="/" className="inactive">
-            <img src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763118/ZombieLand'} alt="Logo" className="header__container__logo-container__logo" />
+            <img
+              src={`${cloudBaseUrl}ZombieLand`}
+              alt="Logo"
+              className="header__container__logo-container__logo"
+            />
           </Link>
         </div>
         <Media query={{ minWidth: 1021 }}>
@@ -73,7 +79,9 @@ export default function Header() {
               }}
             >
               <img
-                src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731668772/menu.png'}
+                src={
+                  `${cloudBaseUrl}menu.png`
+                }
                 alt="Burger Menu"
                 className="header__container__burger-menu__button__burger-icon"
               />

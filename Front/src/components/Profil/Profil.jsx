@@ -5,6 +5,8 @@ import { showModifyProfilModal, showResetPasswordModal } from '../../store/modal
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Profil() {
   const dispatch = useDispatch();
 
@@ -69,14 +71,14 @@ export default function Profil() {
   return (
     <div className="profil">
       <img
-        src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/Firefly_d%C3%A9taill%C3%A9_parc_attraction_restaurant_fast_food_rouge_brume_orageux_sombre_vue_exterieure_mont_2.jpg'}
+        src={`${cloudBaseUrl}Firefly_d%C3%A9taill%C3%A9_parc_attraction_restaurant_fast_food_rouge_brume_orageux_sombre_vue_exterieure_mont_2.jpg`}
         alt="Zombie"
         className="profil__picture main-picture"
       />
       <div className="profil__main-title main-title">
         <h1>Mon Profil</h1>
         <img
-          src={'https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763127/dual-underline.png'}
+          src={`${cloudBaseUrl}dual-underline.png`}
           alt="underline"
           className="profil__main-title__underline underline"
         />

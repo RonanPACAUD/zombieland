@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { showAdminAttractionModal } from '../../../store/modalSlice';
 import { changeInputValue } from '../../../store/attractionSlice';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function AdminAttraction() {
   const dispatch = useDispatch();
 
@@ -62,7 +64,7 @@ export default function AdminAttraction() {
                   {attraction.pictures.map((picture) => (
                     <img
                       key={picture.id}
-                      src={`https://res.cloudinary.com/dqi53fnvz/image/upload/v1731763149/${picture.pictures_url}`}
+                      src={`${cloudBaseUrl}${picture.pictures_url}`}
                     />
                   ))}
                 </div>
