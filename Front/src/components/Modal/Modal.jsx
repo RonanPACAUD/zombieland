@@ -46,7 +46,7 @@ export default function Modal() {
             dispatch(toogleMainModal());
           }}
         >
-          <img src={'close.png'} alt="Close button" />
+          <img src={`${cloudBaseUrl}close.png`} alt="Close button" />
         </button>
         {connexionModalIsOpen && <Connexion />}
         {inscriptionModalIsOpen && <Inscription />}

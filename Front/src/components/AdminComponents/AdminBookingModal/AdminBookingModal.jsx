@@ -1,16 +1,15 @@
 import './AdminBookingModal.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/fr';
-import { changeInputValue } from '../../../store/bookingSlice';
-import { useEffect } from 'react';
 
-const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+import { changeInputValue } from '../../../store/bookingSlice';
 
 dayjs.locale('fr');
 
@@ -29,8 +28,6 @@ export default function AdminBookingModal() {
     selectedBookingValues.ticketValue,
     selectedBookingValues.startDateValue
   ]);
-
-  console.log(selectedBookingValues.startDateValue)
 
   function calculTotal() {
     priceList.forEach((price) => {
