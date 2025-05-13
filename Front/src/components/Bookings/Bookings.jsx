@@ -24,8 +24,6 @@ export default function Bookings() {
 
   const connectedUser = useSelector((state) => state.user.connected);
 
-  // console.log(inputValue);
-
   useEffect(() => {
     calculTotal();
     dispatch({ type: 'GET_PRICES_FROM_API' });
@@ -33,15 +31,19 @@ export default function Bookings() {
 
   useEffect(() => {
     calculTotal();
-  }, [inputValue.durationValue, inputValue.hotelValue, inputValue.ticketValue, inputValue.startDateValue]);
+  }, [
+    inputValue.durationValue,
+    inputValue.hotelValue,
+    inputValue.ticketValue,
+    inputValue.startDateValue,
+  ]);
 
   function calculTotal() {
     priceList.forEach((price) => {
       if (
         inputValue.hotelValue === price.hotel &&
         parseInt(inputValue.durationValue) === price.duration
-        ) {
-        console.log(inputValue.durationValue) 
+      ) {
         const total = price.price * inputValue.ticketValue;
         dispatch(changeInputValue({ totalValue: total }));
       }
@@ -86,9 +88,7 @@ export default function Bookings() {
             });
           }}
         >
-          {!connectedUser && (
-            <div className="inactive-form-state"></div>
-          )}
+          {!connectedUser && <div className="inactive-form-state"></div>}
 
           <div className="bookings__book__form-container">
             <div className="bookings__book__form__left">

@@ -32,7 +32,6 @@ const userMiddleware = (store) => (next) => (action) => {
   }
 
   if (action.type === 'UPDATE_CONNECTED_USER') {
-    console.log(action.payload);
     fetch(`${apiUrl}/user/${action.payload}`, {
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -40,7 +39,6 @@ const userMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         store.dispatch(updateConnectedUser(data));
       });
   }

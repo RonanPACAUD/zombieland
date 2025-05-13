@@ -23,7 +23,6 @@ const connexionMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         store.dispatch(changeInputValue({message: data.message}));
         if (data.token) {
           localStorage.setItem('token', data.token);

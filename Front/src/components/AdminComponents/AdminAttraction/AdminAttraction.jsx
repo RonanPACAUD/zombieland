@@ -16,8 +16,6 @@ export default function AdminAttraction() {
   const categoriesList = useSelector((state) => state.category.categoriesList);
   const inputValue = useSelector((state) => state.attraction.settings);
 
-  console.log(inputValue);
-
   useEffect(() => {
     dispatch({ type: 'GET_ALL_ATTRACTIONS' });
     dispatch({ type: 'GET_ALL_CATEGORIES' });

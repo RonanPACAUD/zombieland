@@ -28,7 +28,6 @@ const bookingSlice = createSlice({
   initialState,
   reducers: {
     changeInputValue: (state, action) => {
-      console.log(action.payload)
       return {
         ...state,
         settings: {

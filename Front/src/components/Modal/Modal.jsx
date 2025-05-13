@@ -10,6 +10,8 @@ import AdminUserModal from '../AdminComponents/AdminUserModal/AdminUserModal';
 import ProfileModal from '../ProfileModal/ProfileModal';
 import ResetPassword from '../ResetPassword/ResetPassword';
 
+const cloudBaseUrl = import.meta.env.VITE_REACT_CLOUD_BASE_URL;
+
 export default function Modal() {
   const dispatch = useDispatch();
 
